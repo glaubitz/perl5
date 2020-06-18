@@ -698,7 +698,7 @@ struct opslot {
     U16         opslot_size;        /* size of this slot (in pointers) */
     U16         opslot_offset;      /* offset from start of slab (in ptr units) */
     OP		opslot_op;		/* the op itself */
-};
+}__attribute__ ((aligned (4)));
 
 struct opslab {
     OPSLAB *	opslab_next;		/* next slab */
